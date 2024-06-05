@@ -12,7 +12,7 @@ const Header = () => {
                 <form>
                     <input type="text" placeholder="Search task" />
                     <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
             </search>
