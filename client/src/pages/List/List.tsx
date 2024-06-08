@@ -1,8 +1,7 @@
 import React from "react";
-import "./List.css";
 
 const List = () => {
-    return <div></div>;
+    return <div>List</div>;
 };
 
 export default List;

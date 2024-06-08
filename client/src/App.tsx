@@ -1,17 +1,22 @@
 import React from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header/Header";
-import Sidebar from "./components/Sidebar/Sidebar";
-import List from "./pages/List/List";
+import { Layout } from "./components";
+import { Calendar, List, NotFound, ScheduledList, TodayList } from "./pages";
 
 const App = () => {
     return (
         <div className="app">
-            <Header />
-            <div className="content">
-                <Sidebar />
-                <List />
-            </div>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Navigate to="today" />} />
+                    <Route path="today" element={<TodayList />} />
+                    <Route path="scheduled" element={<ScheduledList />} />
+                    <Route path="calendar" element={<Calendar />} />
+                    <Route path="lists/:listId" element={<List />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
+            </Routes>
         </div>
     );
 };
