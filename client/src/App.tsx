@@ -4,7 +4,7 @@ import "./App.css";
 import { Layout } from "./components";
 import { Calendar, List, NotFound, ScheduledList, TodayList } from "./pages";
 
-const App = () => {
+const App: () => React.JSX.Element = () => {
     return (
         <div className="app">
             <Routes>

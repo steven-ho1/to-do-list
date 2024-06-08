@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { Header, Sidebar } from "../";
 import "./Layout.css";
 
-const Layout = () => {
+const Layout: () => React.JSX.Element = () => {
     return (
         <>
             <Header />

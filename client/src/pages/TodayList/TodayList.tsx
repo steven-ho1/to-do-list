@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodayList = () => {
+const TodayList: () => React.JSX.Element = () => {
     return <div>TodayList</div>;
 };
 

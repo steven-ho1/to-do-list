@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar: () => React.JSX.Element = () => {
     return (
         <nav className="menu">
             <div className="tasks">

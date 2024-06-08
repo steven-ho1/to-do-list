@@ -1,6 +1,6 @@
 import React from "react";
 
-const ScheduledList = () => {
+const ScheduledList: () => React.JSX.Element = () => {
     return <div>ScheduledList</div>;
 };
 

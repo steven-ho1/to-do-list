@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/logo.png";
 import "./Header.css";
 
-const Header = () => {
+const Header: () => React.JSX.Element = () => {
     return (
         <header>
             <div className="logo">
