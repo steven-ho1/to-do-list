@@ -1,5 +1,5 @@
-export { default as Calendar } from "./Calendar/Calendar";
-export { default as List } from "./List/List";
-export { default as NotFound } from "./NotFound/NotFound";
-export { default as ScheduledList } from "./ScheduledList/ScheduledList";
-export { default as TodayList } from "./TodayList/TodayList";
+export { default as Calendar } from "./calendar/Calendar";
+export { default as List } from "./list/List";
+export { default as NotFound } from "./not-found/NotFound";
+export { default as ScheduledList } from "./scheduled-list/ScheduledList";
+export { default as TodayList } from "./today-list/TodayList";

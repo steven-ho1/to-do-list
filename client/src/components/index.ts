@@ -1,3 +1,3 @@
-export { default as Header } from "./Header/Header";
-export { default as Layout } from "./Layout/Layout";
-export { default as Sidebar } from "./Sidebar/Sidebar";
+export { default as Header } from "./header/Header";
+export { default as Layout } from "./layout/Layout";
+export { default as Sidebar } from "./sidebar/Sidebar";

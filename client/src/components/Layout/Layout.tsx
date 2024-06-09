@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Header, Sidebar } from "../";
+import { Header, Sidebar } from "..";
 import "./Layout.css";
 
 const Layout: () => React.JSX.Element = () => {
