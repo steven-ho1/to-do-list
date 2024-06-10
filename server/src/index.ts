@@ -1,12 +1,25 @@
+import cors from "cors";
 import express, { Express, Request, Response } from "express";
 import http from "http";
+import { TodoList } from "../../common/interfaces";
 
 const app: Express = express();
+const port: number = 4000;
+const lists: TodoList[] = [
+    { id: "1", title: "first", todos: [{ task: "task 1", completed: true }] },
+    { id: "2", title: "second", todos: [] },
+];
 
+app.use(cors());
 app.use(express.json());
 
-// test
-app.get("/", (req: Request, res: Response) => {});
+app.get("/lists", (_req: Request, res: Response) => {
+    const todoLists = lists.map((todoList) => ({
+        id: todoList.id,
+        title: todoList.title,
+    }));
+    res.json(todoLists);
+});
 
-http.createServer(app).listen(3000);
-console.log("Démarré");
+http.createServer(app).listen(port);
+console.log(`Server is running on port ${port}`);
