@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { TodoList } from "../../../common/interfaces";
-import { devEnvironment } from "../environments/development";
+import { fetchTodoLists } from "../api/todo-api";
 import { ListContext } from "./ListContext";
 
 export const ListProvider = ({ children }: { children: React.ReactNode }) => {
     const [todoLists, setTodoLists] = useState<TodoList[]>([]);
 
     useEffect(() => {
-        const fetchTodoLists = async () => {
+        (async () => {
             try {
-                const response: Response = await fetch(
-                    `${devEnvironment.serverUrl}/lists`
-                );
-                setTodoLists(await response.json());
+                const todoLists = await fetchTodoLists();
+                setTodoLists(todoLists);
             } catch (error) {
                 console.error(error);
             }
-        };
-        fetchTodoLists();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        })();
     }, []);
 
     return (

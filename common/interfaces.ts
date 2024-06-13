@@ -1,7 +1,10 @@
-export interface TodoList {
+export interface TodoListSummary {
     id: string;
     title: string;
-    todos?: Todo[];
+}
+
+export interface TodoList extends TodoListSummary {
+    todos: Todo[];
 }
 
 export interface Todo {

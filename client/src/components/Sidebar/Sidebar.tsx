@@ -1,12 +1,12 @@
 import React from "react";
-import { Agenda, TodoLists } from "../../components";
+import { Agenda, TodoListCollection } from "../../components";
 import "./Sidebar.css";
 
 const Sidebar: () => React.JSX.Element = () => {
     return (
         <nav className="menu">
             <Agenda />
-            <TodoLists />
+            <TodoListCollection />
         </nav>
     );
 };
